@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Energy Prediction Model for Gas Turbine</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="inflow_1" placeholder="AT" required="required" />
+        <input type="text" name="inflow_2" placeholder="AP" required="required" />
+          <input type="text" name="inflow_3" placeholder="AH" required="required" />
+            <input type="text" name="inflow_4" placeholder="AFDP" required="required" />
+              <input type="text" name="inflow_5" placeholder="GTEP" required="required" />
+                <input type="text" name="inflow_6" placeholder="TIT" required="required" />
+                  <input type="text" name="inflow_7" placeholder="TAT" required="required" />
+                    <input type="text" name="inflow_8" placeholder="CDP" required="required" />
+                      <input type="text" name="inflow_9" placeholder="CO" required="required" />
+                        <input type="text" name="inflow_10" placeholder="NOx" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict TEY</button>
+    </form>
+   <br>
+   <br>
+ </div>
+</body>
+</html>
